@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/")
 
-                .and()
+                .and().csrf().disable()
                 .rememberMe()
                 .tokenRepository(persistentTokenRepository)
                 .rememberMeParameter("remember-me")

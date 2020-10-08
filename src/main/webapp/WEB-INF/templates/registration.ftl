@@ -17,7 +17,7 @@ Registration
 
     <input  type="password" name="password" value="1111"/><br>
 
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+<#--    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 
     <br>
 

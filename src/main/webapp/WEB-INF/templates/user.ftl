@@ -13,7 +13,7 @@ user
 
 <form method="post" action="/logout">
 
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+<#--    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
     <button type="submit">Выход</button>
 </form>
 
