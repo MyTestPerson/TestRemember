@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Окт 08 2020 г., 21:28
+-- Время создания: Окт 08 2020 г., 23:00
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.3
 
@@ -34,25 +34,6 @@ CREATE TABLE `persistent_logins` (
   `last_used` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `user`
---
-
-CREATE TABLE `user` (
-  `id` int NOT NULL,
-  `username` varchar(45) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `user`
---
-
-INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(7, 'user', '$2a$10$.4enOQDjfr1yGe.8Hop/j.CXaVYHM1nYRTviI6N66KP/B0cup408O');
-
 --
 -- Индексы сохранённых таблиц
 --
@@ -62,23 +43,6 @@ INSERT INTO `user` (`id`, `username`, `password`) VALUES
 --
 ALTER TABLE `persistent_logins`
   ADD PRIMARY KEY (`series`);
-
---
--- Индексы таблицы `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_UNIQUE` (`id`);
-
---
--- AUTO_INCREMENT для сохранённых таблиц
---
-
---
--- AUTO_INCREMENT для таблицы `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
