@@ -1,7 +1,5 @@
 package com.testremember.security;
 
-import com.testremember.model.User;
-import com.testremember.repository.Repositories;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,23 +15,12 @@ public class UserDetail implements UserDetailsService {
 
 
 
-    Repositories repositories;
-
-    public UserDetail(Repositories repositories) {
-        this.repositories = repositories;
-    }
-
 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-
-
-        // Получаем User из БД для проверки
-        User user = repositories.getUserByUsername(username);
-
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+        return new org.springframework.security.core.userdetails.User("user", "{noop}1111",
                 true, true, true, true, getAuthorities());
 
     }

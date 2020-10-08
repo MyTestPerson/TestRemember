@@ -12,9 +12,6 @@
 
 <a href="/login"><button type="submit" >Log in</button></a>
 
-<br>
-
-<a href="/registration"><button type="submit" >Register now</button></a>
 
 <br>
 <br>
