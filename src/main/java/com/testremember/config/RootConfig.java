@@ -6,17 +6,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.sql.DataSource;
 
 @Configuration
 @EnableWebMvc
-@EnableTransactionManagement
 @ComponentScan("com.testremember.security")
-public class RootConfig implements WebMvcConfigurer {
+public class RootConfig {
 
 
 
